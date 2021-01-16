@@ -13,6 +13,7 @@ export class Demographic {
   educationSystem: number;
   moralityPercentage: number;
   totalPower: number;
+  moralitySystem: number
   constructor(payload: any) {
     this.totalPopulation = payload.totalPopulation;
     this.manPercentage = payload.manPercentage;
@@ -26,6 +27,7 @@ export class Demographic {
     this.killed = payload.killed;
     this.educationLevelPercentage = payload.educationLevelPercentage;
     this.educationSystem = payload.educationSystem;
+    this.moralitySystem = payload.moralitySystem;
     this.moralityPercentage = payload.moralityPercentage;
     this.totalPower = payload.totalPower;
   }

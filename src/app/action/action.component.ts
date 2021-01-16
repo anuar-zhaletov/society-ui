@@ -9,6 +9,8 @@ import {ActionService} from '../service/action.service';
 export class ActionComponent implements OnInit {
   countries: [];
   educationSystems: [];
+  moralitySystems: [];
+  politicalSystems: [];
   notification = '';
 
   constructor(private actionService: ActionService) { }
@@ -21,11 +23,35 @@ export class ActionComponent implements OnInit {
     this.actionService.getEducationSystems().subscribe(res => {
       this.educationSystems = JSON.parse(JSON.stringify(res));
     });
+
+    this.actionService.getMoralitySystems().subscribe(res => {
+      this.moralitySystems = JSON.parse(JSON.stringify(res));
+    });
+
+    this.actionService.getPoliticalSystems().subscribe(res => {
+      this.politicalSystems = JSON.parse(JSON.stringify(res));
+    });
   }
 
-  onClickSubmit(data) {
+  onEducationSystemClickSubmit(data) {
     this.actionService.updateEducationSystem(data);
     this.notification = "Successfully updated education system!";
+    setTimeout( () => {
+      this.notification = "";
+    }, 4000);
+  }
+
+  onMoralitySystemClickSubmit(data) {
+    this.actionService.updateMoralitySystem(data);
+    this.notification = "Successfully updated morality system!";
+    setTimeout( () => {
+      this.notification = "";
+    }, 4000);
+  }
+
+  onPoliticalSystemClickSubmit(data) {
+    this.actionService.updatePoliticalSystem(data);
+    this.notification = "Successfully updated political system!";
     setTimeout( () => {
       this.notification = "";
     }, 4000);
