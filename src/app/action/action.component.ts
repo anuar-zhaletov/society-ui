@@ -10,7 +10,6 @@ export class ActionComponent implements OnInit {
   countries: [];
   educationSystems: [];
   moralitySystems: [];
-  politicalSystems: [];
   notification = '';
 
   constructor(private actionService: ActionService) { }
