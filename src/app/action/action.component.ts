@@ -44,11 +44,4 @@ export class ActionComponent implements OnInit {
       this.notification = "";
     }, 4000);
   }
-
-  onPoliticalSystemClickSubmit(data) {
-    this.notification = "Successfully updated political system!";
-    setTimeout( () => {
-      this.notification = "";
-    }, 4000);
-  }
 }
