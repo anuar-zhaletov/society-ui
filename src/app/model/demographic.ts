@@ -5,7 +5,6 @@ export class Demographic {
   numberOfChildren: number;
   numberOfAdult: number;
   happinessPercentage: number;
-  politicalSystem: string;
   born: number;
   died: number;
   killed: number;
@@ -21,7 +20,6 @@ export class Demographic {
     this.numberOfChildren = payload.numberOfChildren;
     this.numberOfAdult = payload.numberOfAdult;
     this.happinessPercentage = payload.happinessPercentage;
-    this.politicalSystem = payload.politicalSystem;
     this.born = payload.born;
     this.died = payload.died;
     this.killed = payload.killed;

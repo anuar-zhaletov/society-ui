@@ -27,12 +27,4 @@ export class ActionService {
   updateMoralitySystem(data) {
     this.http.get('http://localhost:8080/changeMoralitySystem/' + data.country + "/" + data.moralitySystem).subscribe();
   }
-
-  getPoliticalSystems() {
-    return this.http.get('http://localhost:8080/politicalSystems');
-  }
-
-  updatePoliticalSystem(data) {
-    this.http.get('http://localhost:8080/changePoliticalSystem/' + data.country + "/" + data.politicalSystem).subscribe();
-  }
 }

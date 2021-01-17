@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActionService} from '../service/action.service';
 
 @Component({
@@ -27,10 +27,6 @@ export class ActionComponent implements OnInit {
     this.actionService.getMoralitySystems().subscribe(res => {
       this.moralitySystems = JSON.parse(JSON.stringify(res));
     });
-
-    this.actionService.getPoliticalSystems().subscribe(res => {
-      this.politicalSystems = JSON.parse(JSON.stringify(res));
-    });
   }
 
   onEducationSystemClickSubmit(data) {
@@ -50,7 +46,6 @@ export class ActionComponent implements OnInit {
   }
 
   onPoliticalSystemClickSubmit(data) {
-    this.actionService.updatePoliticalSystem(data);
     this.notification = "Successfully updated political system!";
     setTimeout( () => {
       this.notification = "";
