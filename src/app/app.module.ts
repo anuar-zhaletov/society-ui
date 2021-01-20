@@ -8,12 +8,14 @@ import { StatisticService } from './service/statistic.service';
 import {StatisticComponent} from './statistic/statistic.component';
 import { ActionComponent } from './action/action.component';
 import {FormsModule} from '@angular/forms';
+import { HeatmapComponent } from './heatmap/heatmap.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StatisticComponent,
     ActionComponent,
+    HeatmapComponent,
   ],
   imports: [
     BrowserModule,

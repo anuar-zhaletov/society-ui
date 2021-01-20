@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div id="chart"></div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+      <div class="my-4">
+        <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="false">Profile</a>
+          </li>
+        </ul>
+        <form *ngIf="human">
+          <div class="row mt-5 align-items-center">
+            <div class="col-md-3 text-center mb-5">
+              <div class="avatar avatar-xl">
+                <img src="https://bootdey.com/img/Content/avatar/avatar{{ human.sex === 'MAN' ? 7 : 8 }}.png" alt="..." class="avatar-img rounded-circle" />
+              </div>
+            </div>
+            <div class="col">
+              <div class="row align-items-center">
+                <div class="col-md-7">
+                  <h4 class="mb-1">{{ human.name }}</h4>
+                  <p class="small mb-3"><span class="badge badge-dark">{{ human.personality }}</span></p>
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col-md-6">
+                  <p class="mb-2">Information:</p>
+                  <ul class="small text-muted pl-4 mb-0">
+                    <li>Id: {{ human.id }}</li>
+                    <li>Age: {{ human.age }}</li>
+                    <li>Education: {{ human.education }}</li>
+                    <li>Morality: {{ human.morality }}</li>
+                    <li>Power: {{ human.power }}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="my-4" />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
