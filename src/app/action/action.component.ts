@@ -7,7 +7,6 @@ import {ActionService} from '../service/action.service';
   styleUrls: ['./action.component.css']
 })
 export class ActionComponent implements OnInit {
-  countries: [];
   educationSystems: [];
   moralitySystems: [];
   notification = '';
@@ -15,10 +14,6 @@ export class ActionComponent implements OnInit {
   constructor(private actionService: ActionService) { }
 
   ngOnInit(): void {
-    this.actionService.getCountries().subscribe(res => {
-      this.countries = JSON.parse(JSON.stringify(res));
-    });
-
     this.actionService.getEducationSystems().subscribe(res => {
       this.educationSystems = JSON.parse(JSON.stringify(res));
     });

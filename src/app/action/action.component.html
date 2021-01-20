@@ -4,11 +4,6 @@
       <div class="form-group">
         <span class="badge badge-pill badge-warning">Change Education Level</span>
         <form #educationChange="ngForm" (ngSubmit)="onEducationSystemClickSubmit(educationChange.value)">
-          <span class="badge badge-pill badge-light">Country:</span>
-          <select class="form-control" name="country" ngModel>
-            <option *ngFor="let country of countries">{{country}}</option>
-          </select>
-          <br/>
           <span class="badge badge-pill badge-light">Education System:</span>
           <select class="form-control" name="educationSystem" ngModel>
             <option *ngFor="let educationSystem of educationSystems">{{educationSystem}}</option>
@@ -22,11 +17,6 @@
       <div class="form-group">
         <span class="badge badge-pill badge-warning">Change Morality Level</span>
         <form #moralityChange="ngForm" (ngSubmit)="onMoralitySystemClickSubmit(moralityChange.value)">
-          <span class="badge badge-pill badge-light">Country:</span>
-          <select class="form-control" name="country" ngModel>
-            <option *ngFor="let country of countries">{{country}}</option>
-          </select>
-          <br/>
           <span class="badge badge-pill badge-light">Morality System:</span>
           <select class="form-control" name="moralitySystem" ngModel>
             <option *ngFor="let moralitySystem of moralitySystems">{{moralitySystem}}</option>

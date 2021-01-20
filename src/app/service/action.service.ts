@@ -8,16 +8,12 @@ export class ActionService {
   constructor(private http: HttpClient) {
   }
 
-  getCountries() {
-    return this.http.get('http://localhost:8080/countries');
-  }
-
   getEducationSystems() {
     return this.http.get('http://localhost:8080/educationSystems');
   }
 
   updateEducationSystem(data) {
-    this.http.get('http://localhost:8080/changeEducationSystem/' + data.country + "/" + data.educationSystem).subscribe();
+    this.http.get('http://localhost:8080/changeEducationSystem/' + data.educationSystem).subscribe();
   }
 
   getMoralitySystems() {
@@ -25,6 +21,6 @@ export class ActionService {
   }
 
   updateMoralitySystem(data) {
-    this.http.get('http://localhost:8080/changeMoralitySystem/' + data.country + "/" + data.moralitySystem).subscribe();
+    this.http.get('http://localhost:8080/changeMoralitySystem/' + data.moralitySystem).subscribe();
   }
 }

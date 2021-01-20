@@ -9,7 +9,7 @@ import {Demographic} from '../model/Demographic';
   styleUrls: ['./statistic.component.css']
 })
 export class StatisticComponent implements OnInit {
-  demographics = new Map<string, Demographic>();
+  demographic: Demographic;
 
   constructor(private route: ActivatedRoute,
               private router: Router,
@@ -18,9 +18,7 @@ export class StatisticComponent implements OnInit {
   ngOnInit() {
     setInterval( () => {
       this.statisticService.getDemographics().subscribe((res) => {
-        for (const [key, value] of Object.entries(res)) {
-          this.demographics.set(key, new Demographic(JSON.parse(JSON.stringify(value))));
-        }
+        this.demographic = res;
       });
     }, 1000);
   }

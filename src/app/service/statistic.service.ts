@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import {Demographic} from '../model/demographic';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,6 @@ export class StatisticService {
   }
 
   getDemographics() {
-    return this.http.get('http://localhost:8080/getDemographicStatistic');
+    return this.http.get<Demographic>('http://localhost:8080/getDemographicStatistic');
   }
 }
